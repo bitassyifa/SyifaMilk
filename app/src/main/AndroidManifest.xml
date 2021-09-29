@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.projectassyifa.syifamilk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".container.MyApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_syifamilk"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_syifamilk_round"
+        android:screenOrientation="landscape"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SyifaMilk"
+        android:usesCleartextTraffic="true"
+        tools:node="replace">
+        <activity
+            android:name=".screen.product.ManagProductActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".screen.payment.PaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".screen.oder.OrderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".screen.user.ManagementUser"
+            android:exported="true" />
+        <activity
+            android:name=".screen.home.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".screen.login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.easyphotopicker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/easyimage_filepaths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable-v24/bg_spinner.xml" value="0.136875" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable-v24/ic_ft.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable-v24/rect.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_content.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_dialog_add.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_ft.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_kasir.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_search.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_text.xml" value="0.2591145833333333" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_text1.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_text2.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/btn_cust.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_add_person.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2623697916666667" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_delete.xml" value="0.166015625" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_duit.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_edit.xml" value="0.166015625" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_info.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_kartu.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_lgout.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_produk.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_profil.xml" value="0.19875" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/ic_search.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/rect1.xml" value="0.18515625" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/round_corner.xml" value="0.1" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout-land/fragment_login_layout.xml" value="0.31040564373897706" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_home.xml" value="0.275" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_main.xml" value="0.16745956232159848" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_manag_product.xml" value="0.18" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_management_product.xml" value="0.275" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_management_user.xml" value="0.18" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_order.xml" value="0.22" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_payment.xml" value="0.16" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_cart.xml" value="0.16" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_category.xml" value="0.275" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_list_product.xml" value="0.5" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_manag_product.xml" value="0.18" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_order.xml" value="0.67" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_role.xml" value="0.22" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_user.xml" value="0.2" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/alert_delete_failed.xml" value="0.22734375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/alert_delete_succes.xml" value="0.2" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/alert_failed.xml" value="0.11" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/alert_nointernet.xml" value="0.171484375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/alert_notfound.xml" value="0.159375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/alert_success.xml" value="0.1" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_add_product_layout.xml" value="0.18" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_adduser_layout.xml" value="0.22" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_home_layout.xml" value="0.2" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_login_layout.xml" value="0.14" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_payment_cash.xml" value="0.2" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_payment_deposit.xml" value="0.2623152709359606" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_payment_fadipay.xml" value="0.21674876847290642" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_update_product_layout.xml" value="0.190625" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_update_user_layout.xml" value="0.16" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/layout_listview.xml" value="0.15546875" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/loadingbrown.xml" value="0.275" />
+        <entry key="..\:/Users/As-Syifa/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.15546875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
