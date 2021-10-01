@@ -97,17 +97,17 @@
                 android:textColor="@color/keduax"
                 android:textSize="20dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_text1"
-                android:layout_weight="1.1"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="Stock"
-                android:textAlignment="center"
-                android:textColor="@color/keduax"
-                android:textSize="20dp" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/bg_text1"-->
+<!--                android:layout_weight="1.1"-->
+<!--                android:fontFamily="@font/poppins_bold"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Stock"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/keduax"-->
+<!--                android:textSize="20dp" />-->
 
 
             <TextView

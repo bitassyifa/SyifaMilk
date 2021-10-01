@@ -12,21 +12,16 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
-import com.google.android.material.tabs.TabLayout
 import com.projectassyifa.syifamilk.R
 import com.projectassyifa.syifamilk.container.MyApp
 import com.projectassyifa.syifamilk.data.cart.adapter.AdapterCart
 import com.projectassyifa.syifamilk.data.cart.vm.CartVM
 import com.projectassyifa.syifamilk.data.product.adapter.AdapterProduct
 import com.projectassyifa.syifamilk.data.product.vm.ProductVM
-import com.projectassyifa.syifamilk.data.user.adapter.AdapterUser
 import com.projectassyifa.syifamilk.screen.alert.LoadingBrown
-import com.projectassyifa.syifamilk.screen.payment.PaymentActivity
-import com.projectassyifa.syifamilk.screen.payment.PaymentCash
+import com.projectassyifa.syifamilk.screen.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_management_user.*
 import kotlinx.android.synthetic.main.activity_order.*
 import javax.inject.Inject
@@ -81,7 +76,7 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
                 loading.isDismiss()
             }
 
-        },3000)
+        },2000)
 
         // list product
         R_listproduct.layoutManager = StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL)
@@ -89,6 +84,7 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
 
             adapterProduct = AdapterProduct(it,this,cartVM)
             R_listproduct.adapter=adapterProduct
+            adapterProduct.notifyDataSetChanged()
         })
         productVM.product(this)
 
@@ -101,8 +97,10 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
 
                     adapterProduct = AdapterProduct(it,this@OrderActivity,cartVM)
                     R_listproduct.adapter=adapterProduct
+                    adapterProduct.notifyDataSetChanged()
                 })
                 productVM.search_product(this@OrderActivity,keyword.toString())
+
                 return false
             }
 
@@ -113,6 +111,7 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
 
                     adapterProduct = AdapterProduct(it,this@OrderActivity,cartVM)
                     R_listproduct.adapter=adapterProduct
+                    adapterProduct.notifyDataSetChanged()
                 })
                 productVM.search_product(this@OrderActivity,keyword.toString())
                 return false
@@ -126,19 +125,22 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
                 println("INI IT $it")
                 adapterProduct = AdapterProduct(it,this,cartVM)
                 R_listproduct.adapter=adapterProduct
+                adapterProduct.notifyDataSetChanged()
             })
             productVM.by_category(this,1)
+
         }
+        val username = dataLogin?.getString(
+            getString(R.string.username),
+            getString(R.string.default_value)
+        )
 
         list_cart.layoutManager = LinearLayoutManager(this)
-       adapterCart = AdapterCart(cartVM.cartLiveData.value!!,cartVM,subtotal,btn_payment,this)
+       adapterCart = AdapterCart(cartVM.cartLiveData.value!!,cartVM,subtotal,btn_payment,this,username.toString())
         list_cart.adapter = adapterCart
         cartVM.cartLiveData.observe(this, Observer {
 
-         it.forEach {
-             tampung.add(it.productName)
 
-         }
             adapterCart.notifyDataSetChanged()
         })
 //            btn_payment.setOnClickListener(this)
@@ -165,6 +167,10 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
 //                startActivity(intent)
 //            }
         }
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, HomeActivity::class.java))
     }
 }
 

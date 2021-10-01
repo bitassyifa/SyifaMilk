@@ -7,6 +7,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.projectassyifa.syifamilk.data.payment.api.PaymentAPI
 import com.projectassyifa.syifamilk.data.payment.model.PaymentMethodModel
+import com.projectassyifa.syifamilk.data.payment.model.PaymentModel
 import com.projectassyifa.syifamilk.data.product.model.ProductModel
 import com.projectassyifa.syifamilk.utils.ResponseAPI
 import retrofit2.Call
@@ -17,7 +18,7 @@ import javax.inject.Inject
 
 class PaymentRepo @Inject constructor(var paymentAPI: PaymentAPI) {
     var p_method : MutableLiveData<List<PaymentMethodModel>> = MutableLiveData()
-
+    var responseAPI = MutableLiveData<ResponseAPI>()
 
     //get payment method
     fun get_payment_method(context: Context){
@@ -43,4 +44,32 @@ class PaymentRepo @Inject constructor(var paymentAPI: PaymentAPI) {
 
         })
     }
+
+    fun post_payment(context: Context,paymentModel: PaymentModel){
+        paymentAPI.post_payment(paymentModel).enqueue(object : Callback<ResponseAPI>{
+            override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
+                val resData = response.body()
+                if (response.code() == 200){
+                    Toast.makeText(
+                        context,
+                        "${resData?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    responseAPI.value = resData
+                } else {
+                    Toast.makeText(
+                        context,
+                        "${resData?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseAPI>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }
+
 }

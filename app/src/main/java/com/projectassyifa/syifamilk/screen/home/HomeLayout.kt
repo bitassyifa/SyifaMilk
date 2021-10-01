@@ -13,6 +13,7 @@ import com.projectassyifa.syifamilk.R
 import com.projectassyifa.syifamilk.screen.login.LoginActivity
 import com.projectassyifa.syifamilk.screen.oder.OrderActivity
 import com.projectassyifa.syifamilk.screen.product.ManagProductActivity
+import com.projectassyifa.syifamilk.screen.report.ReportMainActivity
 import com.projectassyifa.syifamilk.screen.user.ManagementUser
 import kotlinx.android.synthetic.main.fragment_home_layout.*
 
@@ -47,6 +48,10 @@ class HomeLayout : Fragment() {
         menu_inventory.setOnClickListener {
             startActivity(Intent(this.context,ManagProductActivity::class.java))
         }
+        menu_report.setOnClickListener {
+            startActivity(Intent(this.context,ReportMainActivity::class.java))
+        }
+
         btn_logout.setOnClickListener {
             println("BTN LOGOUT")
             // Initialize a new instance of

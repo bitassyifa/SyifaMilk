@@ -10,6 +10,8 @@
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_dialog_add.xml" value="0.287109375" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_ft.xml" value="0.287109375" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_kasir.xml" value="0.287109375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_pay_method.xml" value="0.16" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_report.xml" value="0.162890625" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_search.xml" value="0.287109375" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_text.xml" value="0.2591145833333333" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/drawable/bg_text1.xml" value="0.287109375" />
@@ -35,12 +37,14 @@
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_manag_product.xml" value="0.18" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_management_product.xml" value="0.275" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_management_user.xml" value="0.18" />
-        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_order.xml" value="0.22" />
-        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_payment.xml" value="0.16" />
-        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_cart.xml" value="0.16" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_order.xml" value="0.16" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_payment.xml" value="0.2" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/activity_report_main.xml" value="0.11" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_cart.xml" value="0.5" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_category.xml" value="0.275" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_list_product.xml" value="0.5" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_manag_product.xml" value="0.18" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_method_payment.xml" value="0.33" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_order.xml" value="0.67" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_role.xml" value="0.22" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/adapter_user.xml" value="0.2" />
@@ -57,6 +61,8 @@
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_payment_cash.xml" value="0.2" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_payment_deposit.xml" value="0.2623152709359606" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_payment_fadipay.xml" value="0.21674876847290642" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_report_payment.xml" value="0.140234375" />
+        <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_report_transactions.xml" value="0.15078125" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_update_product_layout.xml" value="0.190625" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/fragment_update_user_layout.xml" value="0.16" />
         <entry key="..\:/Users/As-Syifa/AndroidStudioProjects/SyifaMilk/app/src/main/res/layout/layout_listview.xml" value="0.15546875" />

@@ -3,6 +3,7 @@ package com.projectassyifa.syifamilk.container
 import com.projectassyifa.syifamilk.config.Connect
 import com.projectassyifa.syifamilk.data.category.api.CategoryAPI
 import com.projectassyifa.syifamilk.data.login.api.LoginAPI
+import com.projectassyifa.syifamilk.data.payment.api.PaymentAPI
 import com.projectassyifa.syifamilk.data.product.api.ProductAPI
 import com.projectassyifa.syifamilk.data.role.api.RoleAPI
 import com.projectassyifa.syifamilk.data.transaction.api.TransactionAPI
@@ -34,6 +35,10 @@ class NetworkModul {
     @Provides
     fun provideTransactionAPI(): TransactionAPI {
         return Connect.urlGlobal().create(TransactionAPI::class.java)
+    }
+    @Provides
+    fun providePaymentAPI(): PaymentAPI {
+        return Connect.urlGlobal().create(PaymentAPI::class.java)
     }
 
 }

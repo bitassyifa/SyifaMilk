@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.projectassyifa.syifamilk.R
@@ -28,7 +29,7 @@ class AdapterProduct (val  listProduct: List<ProductModel>, var activity: Activi
     override fun onBindViewHolder(holder: ProductVH, position: Int) {
         holder.nama_product.text = listProduct[position].product_name
         holder.harga_product.text = listProduct[position].product_price.toString()
-        holder.stock.text ="Stock : ${listProduct[position].product_stock}"
+//        holder.stock.text ="Stock : ${listProduct[position].product_stock}"
 
         var linkfoto = "http://202.62.9.138/syifamilk_api/uploads/foto_product/${listProduct[position].product_image}"
         Glide
@@ -40,19 +41,25 @@ class AdapterProduct (val  listProduct: List<ProductModel>, var activity: Activi
 
 
 
-        var quantity = 0
-
+        var quantity = 1
+        holder.productQty.text= quantity.toString()
         holder.increment.setOnClickListener {
-            println("KLIK +")
             quantity++
             holder.productQty.text= quantity.toString()
-
         }
+
         holder.decrement.setOnClickListener {
-            println("KLIK -")
-//            holder.productQty.text =(holder.productQty.text.toString().toInt() -1).toString()
-            quantity--
-            holder.productQty.text= quantity.toString()
+            if (quantity ==1){
+                println("minimal 1 pembelian")
+                Toast.makeText(
+                    activity,
+                    "minimal 1 pembelian",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                quantity--
+                holder.productQty.text = quantity.toString()
+            }
         }
         holder.btn_order.setOnClickListener {
 //        2.times(4)
@@ -78,7 +85,7 @@ class AdapterProduct (val  listProduct: List<ProductModel>, var activity: Activi
 class ProductVH  (view: View) : RecyclerView.ViewHolder(view){
     var nama_product = view.findViewById<TextView>(R.id.nama_product)
     var harga_product = view.findViewById<TextView>(R.id.harga_product)
-    var stock = view.findViewById<TextView>(R.id.stok1)
+//    var stock = view.findViewById<TextView>(R.id.stok1)
 //    var desc_product = view.findViewById<TextView>(R.id.desc_product)
     var product_image = view.findViewById<CircleImageView>(R.id.product_image)
     var increment = view.findViewById<ImageButton>(R.id.buttonPlus)

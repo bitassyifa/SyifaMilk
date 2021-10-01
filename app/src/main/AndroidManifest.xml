@@ -19,11 +19,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SyifaMilk"
         android:usesCleartextTraffic="true"
-        tools:node="replace">
+        android:windowSoftInputMode="adjustResize"
+        tools:node="replace"
+      >
+        <activity
+            android:name=".screen.report.ReportMainActivity"
+            android:exported="true" />
         <activity
             android:name=".screen.product.ManagProductActivity"
             android:exported="true" />
-
         <activity
             android:name=".screen.payment.PaymentActivity"
             android:exported="true" />

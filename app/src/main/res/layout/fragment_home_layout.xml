@@ -130,9 +130,9 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center"
-                    android:text="Manajemen User"
+                    android:text="Managememnt User"
                     android:textColor="@color/pertamax"
-                    android:textSize="25dp" />
+                    android:textSize="23dp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -159,7 +159,6 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-
                     android:clickable="true"
                     android:elevation="4dp"
                     android:src="@drawable/report" />

@@ -61,18 +61,18 @@
             android:textColor="@color/keduax"
             android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/stok"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="@drawable/bg_content"
-            android:layout_weight="1.1"
-            android:fontFamily="@font/poppins_medium"
-            android:textAlignment="center"
-            android:text="Stock"
-            android:textColor="@color/keduax"
-            android:textSize="20dp" />
+<!--        <TextView-->
+<!--            android:id="@+id/stok"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:background="@drawable/bg_content"-->
+<!--            android:layout_weight="1.1"-->
+<!--            android:fontFamily="@font/poppins_medium"-->
+<!--            android:textAlignment="center"-->
+<!--            android:text="Stock"-->
+<!--            android:textColor="@color/keduax"-->
+<!--            android:textSize="20dp" />-->
 
         <LinearLayout
 

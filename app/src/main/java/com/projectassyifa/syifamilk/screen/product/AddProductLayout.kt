@@ -129,7 +129,7 @@ class AddProductLayout : DialogFragment() {
             dataProduct.product_name = productName.text.toString()
             dataProduct.product_price = productPrice.text.toString()
             dataProduct.product_description = productDesc.text.toString()
-            dataProduct.product_stock = productStock.text.toString()
+//            dataProduct.product_stock = productStock.text.toString()
             dataProduct.product_category = cat_id.toString()
             dataProduct.created_by = username.toString()
 //            println("DATA product_name ${dataProduct.product_name}")
@@ -158,8 +158,8 @@ class AddProductLayout : DialogFragment() {
             } else {
                 if (productName.text.toString()=="" ||
                     productPrice.text.toString()=="" ||
-                    productDesc.text.toString()=="" ||
-                   productStock.text.toString()==""
+                    productDesc.text.toString()==""
+//                   productStock.text.toString()==""
                 ){
                     Toast.makeText(this.context,"Data harus di isi semua", Toast.LENGTH_SHORT).show()
                 }else{

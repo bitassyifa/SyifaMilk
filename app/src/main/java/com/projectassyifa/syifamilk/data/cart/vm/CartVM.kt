@@ -21,8 +21,12 @@ class CartVM :ViewModel() {
                 unitPrice
             )
         )
-
         cartLiveData.value = cartlist
-        println("DATA CART VM ${cartLiveData.value}")
+
+    }
+    fun deleteCartList(position : Int){
+       cartlist.removeAt(position)
+        cartLiveData.value = cartlist
+
     }
 }
