@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs size="60dp"
+    space="4dp">
+
+    <tab
+        inactiveColor="@color/keduax"
+        activeColor="@color/ketigax"
+        drawable="@drawable/ic_pay"/>
+
+    <tab
+        inactiveColor="@color/keduax"
+        activeColor="@color/ketigax"
+        drawable="@drawable/ic_tr"/>
+
+
+</tabs>

@@ -8,6 +8,7 @@ class TransactionModel (
     var id_transactions : String ="",
     var total_payment : String ="",
     var status :String ="",
+    var tanggal : String ="",
     var created_by : String ="",
     var created_date : String=""
 )

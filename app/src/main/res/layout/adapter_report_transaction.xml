@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".screen.report.ReportTransactions">
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="History Transaksi"
-        android:textAlignment="center"
-        android:textColor="@color/keduax"
-        android:textSize="35dp"
-        android:layout_margin="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
-        android:layout_margin="30dp"
         android:gravity="center"
         android:clickable="true"
         android:id="@+id/wadah_data"
@@ -28,35 +11,38 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_text1"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toTopOf="parent">
 
 
 
         <TextView
+            android:id="@+id/id_trans"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@drawable/bg_content"
             android:layout_weight="1.1"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/poppins_medium"
             android:textAlignment="center"
-            android:text="ID Transaksi"
+            android:text="ID"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+            android:textSize="18dp" />
 
         <TextView
+            android:id="@+id/total_trans"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@drawable/bg_content"
             android:layout_weight="1"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/poppins_medium"
             android:textAlignment="center"
-            android:text="Total Pembayaran"
+            android:text="Total"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+            android:textSize="18dp" />
 
         <TextView
             android:textAlignment="center"
@@ -66,10 +52,10 @@
             android:gravity="center"
             android:background="@drawable/bg_content"
             android:layout_weight="1.1"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/poppins_medium"
             android:text="Status"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+            android:textSize="18dp" />
         <TextView
             android:textAlignment="center"
             android:id="@+id/tgl_trans"
@@ -78,39 +64,34 @@
             android:gravity="center"
             android:background="@drawable/bg_content"
             android:layout_weight="1"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/poppins_medium"
             android:text="Tanggal"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+            android:textSize="18dp" />
 
 
 
-        <TextView
-            android:textAlignment="center"
+        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@drawable/bg_content"
             android:layout_weight="1.2"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Detail Order"
-            android:textColor="@color/keduax"
-            android:textSize="19dp" />
+            android:orientation="horizontal" >
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/btn_detail_trans"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:src="@drawable/cart"
+                android:layout_margin="2dp"
+                />
+
+        </LinearLayout>
 
 
 
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_transactions"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wadah_data" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

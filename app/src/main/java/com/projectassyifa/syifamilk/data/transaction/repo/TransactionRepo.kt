@@ -21,8 +21,37 @@ import javax.inject.Inject
 
 class TransactionRepo @Inject constructor(val transactionAPI : TransactionAPI){
     var responseAPI = MutableLiveData<ResponseAPI>()
+    var data_transaksi : MutableLiveData<List<TransactionModel>> = MutableLiveData()
     var data_transaksi_id : MutableLiveData<TransactionModel> = MutableLiveData()
     var data_order : MutableLiveData<List<OrderModel>> = MutableLiveData()
+
+
+    //get report transactions
+    fun get_trans(context: Context){
+        transactionAPI.get_trans().enqueue(object :  Callback<ResponseAPI> {
+            override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
+                val resbody = response.body()?.data
+                if (response.code() == 200){
+                    val gson = Gson()
+                    val classObject : Type = object  : TypeToken<List<TransactionModel>>() {}.type
+                    val resvalue : List<TransactionModel> = gson.fromJson(gson.toJson(resbody),classObject)
+                    data_transaksi.value = resvalue
+
+                } else {
+                    Toast.makeText(
+                        context,
+                        "error : ${response.body()?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseAPI>, t: Throwable) {
+                println(t.localizedMessage)
+            }
+
+        })
+    }
 
     //add trans
     fun add_transaction(context: Context,transactionmodelPost: TransactionModel_post){

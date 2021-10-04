@@ -15,7 +15,7 @@ interface TransactionAPI {
     //add transaction
     @POST("transactions")
     fun add_transactions(@Body transactionsModel : TransactionModel_post): Call<ResponseAPI>
-//        fun add_transactions(@Body data : List<DataProduct>): Call<ResponseAPI>
+
 
     //get transaksi by id
     @GET("transactions/{id_transactions}")
@@ -24,4 +24,8 @@ interface TransactionAPI {
     //get order transaksi
     @GET("transactions/order/{id_transactions}")
     fun order_id(@Path("id_transactions")id_transactions: String):Call<ResponseAPI>
+
+    //get report transactions
+    @GET("transactions/data_transactions")
+    fun get_trans():Call<ResponseAPI>
 }

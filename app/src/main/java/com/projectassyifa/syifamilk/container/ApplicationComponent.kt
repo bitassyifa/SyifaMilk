@@ -4,13 +4,16 @@ import com.projectassyifa.syifamilk.data.cart.adapter.AdapterCart
 import com.projectassyifa.syifamilk.data.product.adapter.AdapterManagProduct
 import com.projectassyifa.syifamilk.data.product.adapter.AdapterProduct
 import com.projectassyifa.syifamilk.data.transaction.adapter.AdapterOrder
+import com.projectassyifa.syifamilk.data.transaction.adapter.AdapterReportTrans
 import com.projectassyifa.syifamilk.data.user.adapter.AdapterUser
 import com.projectassyifa.syifamilk.screen.login.LoginLayout
 import com.projectassyifa.syifamilk.screen.oder.OrderActivity
+import com.projectassyifa.syifamilk.screen.oder.OrderDetail
 import com.projectassyifa.syifamilk.screen.payment.PaymentActivity
 import com.projectassyifa.syifamilk.screen.product.AddProductLayout
 import com.projectassyifa.syifamilk.screen.product.ManagProductActivity
 import com.projectassyifa.syifamilk.screen.product.UpdateProductLayout
+import com.projectassyifa.syifamilk.screen.report.ReportTransactions
 import com.projectassyifa.syifamilk.screen.user.AdduserLayout
 import com.projectassyifa.syifamilk.screen.user.ManagementUser
 import com.projectassyifa.syifamilk.screen.user.UpdateUserLayout
@@ -32,4 +35,7 @@ interface ApplicationComponent {
     fun inject(adapterCart: AdapterCart)
     fun inject(paymentActivity: PaymentActivity)
     fun inject(adapterOrder: AdapterOrder)
+    fun inject(adapterReportTrans: AdapterReportTrans)
+    fun inject(reportTransactions: ReportTransactions)
+    fun inject(orderDetail: OrderDetail)
 }

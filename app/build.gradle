@@ -35,7 +35,9 @@ android {
 }
 
 dependencies {
-
+    //tablayout
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
     //input validation
 
     implementation 'com.basgeekball:awesome-validation:4.3'

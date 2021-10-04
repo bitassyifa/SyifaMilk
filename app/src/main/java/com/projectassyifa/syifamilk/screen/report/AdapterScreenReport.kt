@@ -1,31 +1,45 @@
 package com.projectassyifa.syifamilk.screen.report
 
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.lifecycle.Lifecycle
+import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class AdapterScreenReport (fm : FragmentManager) : FragmentStatePagerAdapter(fm,
-    BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
-) {
+class AdapterScreenReport(fm: FragmentManager, lifecycle: Lifecycle, private var numberOfTabs: Int) : FragmentStateAdapter(fm, lifecycle) {
 
-    var fragmentList : ArrayList<Fragment> = ArrayList()
-    var fragmenttitle : ArrayList<String> = ArrayList()
+    override fun createFragment(position: Int): Fragment {
+        when (position) {
+            0 -> {
 
+                val bundle = Bundle()
+                bundle.putString("fragmentName", "Transaksi")
+                val transasctionFr = ReportTransactions()
+                transasctionFr.arguments = bundle
+                return transasctionFr
+            }
+            1 -> {
 
-    override fun getCount(): Int {
-        return fragmentList.size
+                val bundle = Bundle()
+                bundle.putString("fragmentName", "Pembayaran")
+                val paymentFm = ReportPayment()
+                paymentFm.arguments = bundle
+                return paymentFm
+            }
+//            2 -> {
+//                // # Books Fragment
+//                val bundle = Bundle()
+//                bundle.putString("fragmentName", "Books Fragment")
+//                val booksFragment = DemoFragment()
+//                booksFragment.arguments = bundle
+//                return booksFragment
+//            }
+            else -> return ReportTransactions()
+        }
     }
 
-    override fun getItem(position: Int): Fragment {
-        return fragmentList[position]
-    }
-
-    override fun getPageTitle(position: Int): CharSequence? {
-        return fragmenttitle[position]
-    }
-
-    fun addFragment(fragment: Fragment, title : String){
-        fragmentList.add(fragment)
-        fragmenttitle.add(title)
+    override fun getItemCount(): Int {
+        return numberOfTabs
     }
 }

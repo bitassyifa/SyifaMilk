@@ -13,6 +13,7 @@ import javax.inject.Inject
 class TransactionVM @Inject constructor(val transactionRepo: TransactionRepo) {
     val responseAPI : MutableLiveData<ResponseAPI> = transactionRepo.responseAPI
     val data_transaksi_id : MutableLiveData<TransactionModel> = transactionRepo.data_transaksi_id
+    val data_transaksi : MutableLiveData<List<TransactionModel>> = transactionRepo.data_transaksi
     val data_order : MutableLiveData<List<OrderModel>> = transactionRepo.data_order
 
     fun add_transaction(context: Context,transactionModel: TransactionModel_post){
@@ -25,5 +26,9 @@ class TransactionVM @Inject constructor(val transactionRepo: TransactionRepo) {
 
     fun order_id(context: Context,id_transaction: String){
         transactionRepo.order_id(context, id_transaction)
+    }
+
+    fun get_trans(context:Context){
+        transactionRepo.get_trans(context)
     }
 }
