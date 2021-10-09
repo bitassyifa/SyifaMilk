@@ -229,9 +229,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/R_listproduct"
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
-                android:layout_margin="15dp"
-                app:layout_constraintTop_toBottomOf="@+id/search_product" />
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_product"
+                tools:layout_editor_absoluteX="15dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

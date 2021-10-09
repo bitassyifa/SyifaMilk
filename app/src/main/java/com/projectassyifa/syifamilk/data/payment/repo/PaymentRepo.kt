@@ -8,6 +8,7 @@ import com.google.gson.reflect.TypeToken
 import com.projectassyifa.syifamilk.data.payment.api.PaymentAPI
 import com.projectassyifa.syifamilk.data.payment.model.PaymentMethodModel
 import com.projectassyifa.syifamilk.data.payment.model.PaymentModel
+import com.projectassyifa.syifamilk.data.payment.model.PaymentReportModel
 import com.projectassyifa.syifamilk.data.product.model.ProductModel
 import com.projectassyifa.syifamilk.utils.ResponseAPI
 import retrofit2.Call
@@ -18,7 +19,41 @@ import javax.inject.Inject
 
 class PaymentRepo @Inject constructor(var paymentAPI: PaymentAPI) {
     var p_method : MutableLiveData<List<PaymentMethodModel>> = MutableLiveData()
+    var report_pay : MutableLiveData<List<PaymentReportModel>> = MutableLiveData()
     var responseAPI = MutableLiveData<ResponseAPI>()
+
+
+    //get report
+    fun get_payment(context: Context){
+        paymentAPI.get_payment().enqueue(object : Callback<ResponseAPI>{
+            override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
+                val resData = response.body()?.data
+                if (response.code() == 200 ){
+                    val gson = Gson()
+                    val dataReport : Type = object : TypeToken<List<PaymentReportModel>?>() {}.type
+                    val dataContent : List<PaymentReportModel> = gson.fromJson(gson.toJson(resData),dataReport)
+                    report_pay.value = dataContent
+                } else{
+                    Toast.makeText(
+                        context,
+                        "Error : ${response.body()?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseAPI>, t: Throwable) {
+                t.printStackTrace()
+                Toast.makeText(
+                    context,
+                    "Kesalahan server! Saat membuka method payment",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+        })
+    }
+
 
     //get payment method
     fun get_payment_method(context: Context){
@@ -66,7 +101,12 @@ class PaymentRepo @Inject constructor(var paymentAPI: PaymentAPI) {
             }
 
             override fun onFailure(call: Call<ResponseAPI>, t: Throwable) {
-                TODO("Not yet implemented")
+                t.printStackTrace()
+                Toast.makeText(
+                    context,
+                    "Kesalahan server! Saat membuka method payment",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
         })

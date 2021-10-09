@@ -16,4 +16,8 @@ interface PaymentAPI {
     //get method payment
     @GET("payment/payment_method")
     fun get_payment_method(): Call<ResponseAPI>
+
+    // get report
+    @GET("payment")
+    fun get_payment():Call<ResponseAPI>
 }

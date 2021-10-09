@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.projectassyifa.syifamilk.R
+import com.projectassyifa.syifamilk.screen.dashboard.DashboardActivity
 import com.projectassyifa.syifamilk.screen.login.LoginActivity
 import com.projectassyifa.syifamilk.screen.oder.OrderActivity
 import com.projectassyifa.syifamilk.screen.product.ManagProductActivity
@@ -50,6 +51,10 @@ class HomeLayout : Fragment() {
         }
         menu_report.setOnClickListener {
             startActivity(Intent(this.context,ReportMainActivity::class.java))
+        }
+
+        menu_dashboard.setOnClickListener {
+            startActivity(Intent(this.context,DashboardActivity::class.java))
         }
 
         btn_logout.setOnClickListener {

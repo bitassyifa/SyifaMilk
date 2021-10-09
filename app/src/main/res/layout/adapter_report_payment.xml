@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center"
+        android:clickable="true"
+        android:id="@+id/wadah_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_text1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <TextView
+            android:id="@+id/id_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="ID pay"
+            android:textColor="@color/keduax"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/total_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="total pay"
+            android:textColor="@color/keduax"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tgl_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="tgl pay"
+            android:textColor="@color/keduax"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/sts_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="sts"
+            android:textColor="@color/keduax"
+            android:textSize="18dp" />
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/detail_pay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1.1"
+            android:textAlignment="center"
+            android:src="@drawable/detail"
+            android:textColor="@color/keduax"
+            android:textSize="18dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

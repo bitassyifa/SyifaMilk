@@ -18,3 +18,15 @@ class PaymentMethodModel {
     var logo : String =""
 }
 
+class PaymentReportModel {
+    var id_payment : String = ""
+    var id_transactions : String =""
+    var name_payment_method : String =""
+    var logo : String =""
+    var customer_id : String =""
+    var customer_name : String =""
+    var total_payment : String =""
+    var remaining : String =""
+    var status : String =""
+    var tanggal : String =""
+}

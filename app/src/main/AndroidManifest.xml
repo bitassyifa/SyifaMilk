@@ -20,8 +20,13 @@
         android:theme="@style/Theme.SyifaMilk"
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="adjustResize"
-        tools:node="replace"
-      >
+        tools:node="merge"
+  >
+        <activity
+            android:name=".screen.dashboard.DashboardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.SyifaMilk.NoActionBar" />
         <activity
             android:name=".screen.report.ReportMainActivity"
             android:exported="true" />
@@ -59,6 +64,7 @@
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
+                tools:replace="android:resource"
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/easyimage_filepaths" />
         </provider>

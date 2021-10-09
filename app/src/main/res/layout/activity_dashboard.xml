@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".screen.dashboard.DashboardActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="Welcome to Dashboard Syifamilk"
+    android:textAlignment="center"
+    android:textColor="#2196F3"
+    android:fontFamily="@font/poppins_bold"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textSize="40dp"/>
+        </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1">
+           <LinearLayout
+               android:background="@drawable/bg_income"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:layout_margin="20sp"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="Perhari"
+                   android:layout_margin="10dp"
+                   android:fontFamily="@font/poppins_medium"
+                   android:textColor="#2196F3"
+                   android:textSize="25sp"/>
+               <TextView
+                   android:id="@+id/income_perhari"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="0"
+                   android:fontFamily="@font/poppins_semibold"
+                   android:textColor="#403D3D"
+                   android:textSize="28sp"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:background="@drawable/bg_income"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:layout_margin="20sp"      android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="Perminggu"
+                   android:layout_margin="10dp"
+                   android:fontFamily="@font/poppins_medium"
+                   android:textColor="#2196F3"
+                   android:textSize="25sp"/>
+               <TextView
+                   android:id="@+id/income_perminggu"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="0"
+                   android:fontFamily="@font/poppins_semibold"
+                   android:textColor="#403D3D"
+                   android:textSize="28sp"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:background="@drawable/bg_income"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:layout_margin="20sp"      android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="Perbulan"
+                   android:layout_margin="10dp"
+                   android:fontFamily="@font/poppins_medium"
+                   android:textColor="#2196F3"
+                   android:textSize="25sp"/>
+               <TextView
+                   android:id="@+id/income_perbulan"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="0"
+                   android:fontFamily="@font/poppins_semibold"
+                   android:textColor="#403D3D"
+                   android:textSize="28sp"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:background="@drawable/bg_income"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:layout_margin="20sp"      android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="Pertahun"
+                   android:layout_margin="10dp"
+                   android:fontFamily="@font/poppins_medium"
+                   android:textColor="#2196F3"
+                   android:textSize="25sp"/>
+               <TextView
+                   android:id="@+id/income_pertahun"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:textAlignment="center"
+                   android:text="0"
+                   android:fontFamily="@font/poppins_semibold"
+                   android:textColor="#403D3D"
+                   android:textSize="28sp"/>
+
+
+           </LinearLayout>
+       </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <com.anychart.AnyChartView
+            android:id="@+id/chart_sale_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="@drawable/bg_income"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="20sp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Pembayaran"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#2196F3"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:id="@+id/income_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="0"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="#403D3D"
+                    android:textSize="28sp"/>
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:id="@+id/img_balance"/>
+            <LinearLayout
+                android:background="@drawable/bg_income"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="20sp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Transaksi"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#2196F3"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:id="@+id/income_transaksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="0"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="#403D3D"
+                    android:textSize="28sp"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
