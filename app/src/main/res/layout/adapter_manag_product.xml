@@ -17,7 +17,19 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
+        <TextView
 
+            android:id="@+id/no_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1.13"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="No"
+            android:textColor="@color/keduax"
+            android:textSize="13dp" />
         <TextView
 
             android:id="@+id/id_product"
@@ -25,14 +37,12 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@drawable/bg_content"
-
-            android:layout_weight="1"
-
+            android:layout_weight="1.05"
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="center"
             android:text="ID"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+             android:textSize="13dp" />
 
         <TextView
             android:id="@+id/nama_produk"
@@ -40,13 +50,25 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@drawable/bg_content"
-            android:layout_weight="0.8"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="center"
             android:text="Nama Produk"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+             android:textSize="13dp" />
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/harga_awal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
 
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Hargaawal"
+            android:textColor="@color/keduax"
+            android:textSize="13dp" />
         <TextView
             android:textAlignment="center"
             android:id="@+id/harga_produk"
@@ -57,10 +79,23 @@
 
             android:layout_weight="1"
             android:fontFamily="@font/poppins_medium"
-            android:text="Harga"
+            android:text="Hargajal"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+             android:textSize="13dp" />
 
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/harga_profit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:text="profit"
+            android:textColor="@color/keduax"
+            android:textSize="13dp" />
 <!--        <TextView-->
 <!--            android:id="@+id/stok"-->
 <!--            android:layout_width="match_parent"-->
@@ -72,7 +107,7 @@
 <!--            android:textAlignment="center"-->
 <!--            android:text="Stock"-->
 <!--            android:textColor="@color/keduax"-->
-<!--            android:textSize="20dp" />-->
+<!--             android:textSize="13dp" />-->
 
         <LinearLayout
 

@@ -7,9 +7,15 @@ import java.util.concurrent.TimeUnit
 
 class Connect {
     companion object{
-        val BASE_URL = "https://jsonplaceholder.typicode.com/"
+
+
+        //production
         val BASE_URL_GLOBAL = "http://202.62.9.138/syifamilk_api/api/"
         val BASE_URL_SYIFAMILK =  "http://202.62.9.138/syifamilk_api/api/syifamilk/"
+
+        //dev
+//        val BASE_URL_GLOBAL = "http://202.62.9.138/syifamilk_api_dev/api/"
+//        val BASE_URL_SYIFAMILK =  "http://202.62.9.138/syifamilk_api_dev/api/syifamilk/"
 
         var okHttpClient: OkHttpClient? = OkHttpClient.Builder()
             .connectTimeout(60, TimeUnit.SECONDS)
@@ -17,14 +23,7 @@ class Connect {
             .writeTimeout(60, TimeUnit.SECONDS)
             .build()
 
-        fun urlConnect():Retrofit{
-            val connection = Retrofit
-                .Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-            return connection
-        }
+
         fun urlUser(): Retrofit {
             val connection = Retrofit
                 .Builder()

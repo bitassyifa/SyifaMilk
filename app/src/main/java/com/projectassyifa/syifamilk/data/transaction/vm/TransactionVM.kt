@@ -28,7 +28,7 @@ class TransactionVM @Inject constructor(val transactionRepo: TransactionRepo) {
         transactionRepo.order_id(context, id_transaction)
     }
 
-    fun get_trans(context:Context){
-        transactionRepo.get_trans(context)
+    fun get_trans(context:Context,tanggal:String){
+        transactionRepo.get_trans(context,tanggal)
     }
 }

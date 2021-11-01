@@ -23,5 +23,9 @@ class ReportVM @Inject constructor(val reportRepo: ReportRepo){
     fun get_income_balance(context: Context){
         reportRepo.get_income_balance(context)
     }
+
+    fun get_sale_day(context: Context,tanggal:String){
+        reportRepo.get_sale_day(context,tanggal)
+    }
 }
 

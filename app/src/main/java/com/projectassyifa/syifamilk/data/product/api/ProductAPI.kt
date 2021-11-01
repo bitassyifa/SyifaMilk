@@ -16,6 +16,7 @@ interface ProductAPI {
     @Multipart
     @POST("product")
     fun add_product(@Part("product_name")product_name : RequestBody,
+                    @Part("starting_price")starting_price : RequestBody,
                     @Part("product_price")product_price : RequestBody,
                     @Part("product_description")product_description : RequestBody,
                     @Part("product_stock")product_stock : RequestBody,
@@ -34,6 +35,7 @@ interface ProductAPI {
     fun update_product(@Path("product_id")product_id: String,
                        @Part("product_name")product_name : RequestBody,
                        @Part("product_price")product_price : RequestBody,
+                       @Part("starting_price")starting_price : RequestBody,
                        @Part("product_description")product_description : RequestBody,
                        @Part("product_stock")product_stock : RequestBody,
                        @Part("product_category")product_category : RequestBody,

@@ -16,11 +16,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_margin="10dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Management Produk"
         android:textColor="@color/keduax"
-        android:textSize="40dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
         android:id="@+id/btn_add_produk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:background="@drawable/bg_text"
         android:drawableLeft="@drawable/ic_produk"
@@ -37,101 +37,140 @@
         android:text="Add Produk"
         android:textAllCaps="false"
         android:textColor="@color/pertamax"
-        android:textSize="25dp"
+        android:textSize="15dp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="30dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add_produk">
-
         <LinearLayout
-            android:id="@+id/wadah_data"
+            android:id="@+id/linearLayout11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_text1"
-            android:clickable="true"
-            android:orientation="horizontal">
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add_produk">
 
-
-            <TextView
-                android:background="@drawable/bg_text1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="ID"
-                android:textAlignment="center"
-                android:textColor="@color/keduax"
-                android:textSize="20dp" />
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/wadah_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_text1"
-                android:layout_weight="0.8"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="Nama Produk"
-                android:textAlignment="center"
-                android:textColor="@color/keduax"
-                android:textSize="20dp" />
+                android:clickable="true"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_text1"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="Harga"
-                android:textAlignment="center"
-                android:textColor="@color/keduax"
-                android:textSize="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.13"
+                    android:background="@drawable/bg_text1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="NO"
+                    android:textAlignment="center"
+                    android:textColor="@color/keduax"
+                    android:textSize="13dp" />
 
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/bg_text1"-->
-<!--                android:layout_weight="1.1"-->
-<!--                android:fontFamily="@font/poppins_bold"-->
-<!--                android:gravity="center"-->
-<!--                android:text="Stock"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/keduax"-->
-<!--                android:textSize="20dp" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.05"
+                    android:background="@drawable/bg_text1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="ID"
+                    android:textAlignment="center"
+                    android:textColor="@color/keduax"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_text1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Nama Produk"
+                    android:textAlignment="center"
+                    android:textColor="@color/keduax"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_text1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Harga Pokok"
+                    android:textAlignment="center"
+                    android:textColor="@color/keduax"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_text1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Harga Jual"
+                    android:textAlignment="center"
+                    android:textColor="@color/keduax"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_text1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Laba"
+                    android:textAlignment="center"
+                    android:textColor="@color/keduax"
+                    android:textSize="13dp" />
+
+                <!--            <TextView-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:background="@drawable/bg_text1"-->
+                <!--                android:layout_weight="1.1"-->
+                <!--                android:fontFamily="@font/poppins_bold"-->
+                <!--                android:gravity="center"-->
+                <!--                android:text="Stock"-->
+                <!--                android:textAlignment="center"-->
+                <!--                android:textColor="@color/keduax"-->
+                <!--                  android:textSize="13dp" />-->
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_text1"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="Action"
-                android:textAlignment="center"
-                android:textColor="@color/keduax"
-                android:textSize="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_text1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Action"
+                    android:textAlignment="center"
+                    android:textColor="@color/keduax"
+                    android:textSize="13dp" />
 
+            </LinearLayout>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/data_produk"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wadah_data" />
-    </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout11" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

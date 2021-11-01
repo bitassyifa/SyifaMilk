@@ -1,162 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen.login.LoginLayout"
-    android:background="@color/keduax">
+    android:orientation="horizontal"
+    android:background="@color/keduax"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:paddingRight="200dp"
+        android:paddingRight="90dp"
         android:orientation="vertical"
         android:background="@drawable/ic_bg_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/gbr_1"
-        android:layout_weight="1" />
-
-    <TextView
-       android:textAlignment="center"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Halal coffee for everyone"
-        android:textColor="@color/keduax"
-        android:textSize="30dp" />
-
-
-    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gbr_1"
+            android:layout_weight="1" />
+
+        <TextView
+            android:gravity="center"
+            android:textAlignment="center"
             android:layout_weight="1.5"
-            android:orientation="vertical">
-                <ImageView
-                    android:layout_margin="50dp"
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/logo_syifamilk"
-                    />
-                <TextView
-                    android:id="@+id/txt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Please Login to your account"
-                    android:textColor="@color/pertamax"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="33dp"
-                    android:layout_marginTop="30dp"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-            <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="30dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/txt">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/LoginStyle"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:layout_marginBottom="10dp"
-                            android:focusedByDefault="false"
-                            android:textColorHint="@color/pertamax"
-                            app:hintTextColor="@color/pertamax">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/usernameInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@android:color/transparent"
-                                android:drawableLeft="@drawable/ic_baseline_person_24"
-                                android:fontFamily="@font/poppins_medium"
-                                android:foregroundTint="@color/pertamax"
-                                android:hint="Username"
-                                android:textColor="@color/pertamax"
-                                android:textColorHint="@color/pertamax"
-                                android:textColorLink="@color/pertamax"
-                                android:textSize="25dp" />
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/LoginStyle"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:layout_marginBottom="10dp"
-                            android:textColorHint="@color/pertamax"
-                            app:hintTextColor="@color/pertamax"
-                            app:passwordToggleEnabled="true"
-                            app:passwordToggleTint="@color/pertamax">
-
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/userPasswordInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@android:color/transparent"
-                                android:drawableStart="@drawable/ic_baseline_https_24"
-                                android:drawableLeft="@drawable/ic_baseline_https_24"
-                                android:fontFamily="@font/poppins_medium"
-                                android:hint="Password"
-                                android:inputType="textPassword"
-                                android:textColor="@color/pertamax"
-                                android:textColorHighlight="@color/pertamax"
-                                android:textColorHint="@color/pertamax"
-                                android:textColorLink="@color/pertamax"
-                                android:textSize="25dp" />
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/userLoginButton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Login"
-                            android:textColor="@color/keduax"
-                            android:textSize="30sp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@color/pertamax"
-                            app:cornerRadius="10dp" />
-                    </LinearLayout>
-                </LinearLayout>
-        </LinearLayout>
-
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Halal coffee for everyone"
+            android:textColor="@color/keduax"
+            android:textSize="30dp" />
 
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_margin="10dp"
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_syifamilk"
+            />
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Login to your account"
+            android:textColor="@color/pertamax"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="22dp"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/txt">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:focusedByDefault="false"
+                    android:textColorHint="@color/pertamax"
+                    app:hintTextColor="@color/pertamax">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/usernameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:fontFamily="@font/poppins_medium"
+                        android:foregroundTint="@color/pertamax"
+                        android:hint="Username"
+                        android:textColor="@color/pertamax"
+                        android:textColorHint="@color/pertamax"
+                        android:textColorLink="@color/pertamax"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/pertamax"
+                    app:hintTextColor="@color/pertamax"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/pertamax">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/userPasswordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:drawableStart="@drawable/ic_baseline_https_24"
+                        android:drawableLeft="@drawable/ic_baseline_https_24"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/pertamax"
+                        android:textColorHighlight="@color/pertamax"
+                        android:textColorHint="@color/pertamax"
+                        android:textColorLink="@color/pertamax"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/userLoginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Login"
+                    android:textColor="@color/keduax"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/pertamax"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

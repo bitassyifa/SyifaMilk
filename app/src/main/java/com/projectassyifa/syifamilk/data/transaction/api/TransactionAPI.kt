@@ -26,6 +26,6 @@ interface TransactionAPI {
     fun order_id(@Path("id_transactions")id_transactions: String):Call<ResponseAPI>
 
     //get report transactions
-    @GET("transactions/data_transactions")
-    fun get_trans():Call<ResponseAPI>
+    @GET("transactions/data_transactions/{tanggal}")
+    fun get_trans(@Path("tanggal")tanggal : String):Call<ResponseAPI>
 }

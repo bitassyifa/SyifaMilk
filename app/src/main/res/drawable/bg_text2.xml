@@ -4,7 +4,7 @@
         <shape android:shape="rectangle">
             <solid android:color="#6C6C6C" />
             <corners
-                android:radius="5dp" />
+                android:radius="2dp" />
         </shape>
     </item>
 
@@ -12,16 +12,16 @@
         <shape android:shape="rectangle">
             <solid android:color="@color/white" />
             <corners
-                android:radius="5dp" />
+                android:radius="2dp" />
         </shape>
     </item>
 
     <!-- White Top color -->
-    <item android:top="5px" android:left="5px">
+    <item android:top="2px" android:left="2px">
         <shape android:shape="rectangle">
             <solid android:color="@color/keduax" />
             <corners
-                android:radius="5dp" />
+                android:radius="2dp" />
         </shape>
     </item>
 

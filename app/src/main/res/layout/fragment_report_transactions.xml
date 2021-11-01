@@ -14,11 +14,47 @@
         android:text="History Transaksi"
         android:textAlignment="center"
         android:textColor="@color/keduax"
-        android:textSize="35dp"
-        android:layout_margin="20sp"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/wadahtgl"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Tanggal"
+            android:textColor="@color/keduax"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tanggal_trans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_text1"
+            android:drawableEnd="@drawable/ic_calender"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/keduax"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins_semibold"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_marginLeft="25dp"
@@ -33,10 +69,20 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/wadahtgl">
 
 
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.15"
+            android:background="@drawable/bg_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="No"
+            android:textAlignment="center"
+            android:textColor="@color/keduax"
+            android:textSize="13dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -47,7 +93,7 @@
             android:textAlignment="center"
             android:text="ID Transaksi"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+              android:textSize="13dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -59,7 +105,7 @@
             android:textAlignment="center"
             android:text="Total Pembayaran"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+              android:textSize="13dp" />
 
         <TextView
             android:textAlignment="center"
@@ -72,7 +118,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:text="Status"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+              android:textSize="13dp" />
         <TextView
             android:textAlignment="center"
             android:id="@+id/tgl_trans"
@@ -84,7 +130,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:text="Tanggal"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+              android:textSize="13dp" />
 
 
 
@@ -98,7 +144,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:text="Detail Order"
             android:textColor="@color/keduax"
-            android:textSize="19dp" />
+              android:textSize="13dp" />
 
 
 

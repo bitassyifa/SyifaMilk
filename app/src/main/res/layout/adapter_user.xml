@@ -17,7 +17,6 @@ android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
 
 
-
         <TextView
             
             android:id="@+id/id_user"
@@ -25,14 +24,12 @@ android:gravity="center"
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@drawable/bg_content"
-          
             android:layout_weight="1.18"
-            
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="center"
             android:text="ID"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/nama"
@@ -46,7 +43,7 @@ android:gravity="center"
             android:textAlignment="center"
             android:text="Fullname"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:textAlignment="center"
@@ -60,7 +57,7 @@ android:gravity="center"
             android:fontFamily="@font/poppins_medium"
             android:text="Email"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/role"
@@ -73,7 +70,7 @@ android:gravity="center"
             android:textAlignment="center"
             android:text="Role"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 <!--        <ImageView-->
 <!--            android:id="@+id/photo"-->
 <!--            android:layout_width="match_parent"-->
@@ -86,7 +83,7 @@ android:gravity="center"
 <!--            android:gravity="center"-->
 <!--            android:text="Photo"-->
 <!--            android:textColor="@color/keduax"-->
-<!--            android:textSize="20dp" />-->
+<!--            android:textSize="15dp" />-->
         <LinearLayout
             
             android:layout_width="match_parent"

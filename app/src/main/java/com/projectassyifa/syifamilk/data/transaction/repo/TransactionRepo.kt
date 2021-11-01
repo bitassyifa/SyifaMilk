@@ -27,11 +27,11 @@ class TransactionRepo @Inject constructor(val transactionAPI : TransactionAPI){
 
 
     //get report transactions
-    fun get_trans(context: Context){
-        transactionAPI.get_trans().enqueue(object :  Callback<ResponseAPI> {
+    fun get_trans(context: Context,tanggal:String){
+        transactionAPI.get_trans(tanggal).enqueue(object :  Callback<ResponseAPI> {
             override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
                 val resbody = response.body()?.data
-                if (response.code() == 200){
+                if ( response.body()?.status == true){
                     val gson = Gson()
                     val classObject : Type = object  : TypeToken<List<TransactionModel>>() {}.type
                     val resvalue : List<TransactionModel> = gson.fromJson(gson.toJson(resbody),classObject)
@@ -40,9 +40,13 @@ class TransactionRepo @Inject constructor(val transactionAPI : TransactionAPI){
                 } else {
                     Toast.makeText(
                         context,
-                        "error : ${response.body()?.message}",
+                        "Data transaksi tidak ditemukan",
                         Toast.LENGTH_SHORT
                     ).show()
+                    val gson = Gson()
+                    val classObject : Type = object  : TypeToken<List<TransactionModel>>() {}.type
+                    val resvalue : List<TransactionModel> = gson.fromJson(gson.toJson(resbody),classObject)
+                    data_transaksi.value = resvalue
                 }
             }
 

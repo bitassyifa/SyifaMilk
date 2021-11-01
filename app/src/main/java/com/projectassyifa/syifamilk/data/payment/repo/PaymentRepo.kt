@@ -24,24 +24,29 @@ class PaymentRepo @Inject constructor(var paymentAPI: PaymentAPI) {
 
 
     //get report
-    fun get_payment(context: Context){
-        paymentAPI.get_payment().enqueue(object : Callback<ResponseAPI>{
+    fun get_payment(context: Context,tanggal:String){
+        paymentAPI.get_payment(tanggal).enqueue(object : Callback<ResponseAPI>{
             override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
                 val resData = response.body()?.data
-                if (response.code() == 200 ){
+                println(" DATAPAY $resData")
+                println(" MESSAGE ${response.body()?.message}")
+                if ( response.body()?.status == true ){
                     val gson = Gson()
                     val dataReport : Type = object : TypeToken<List<PaymentReportModel>?>() {}.type
                     val dataContent : List<PaymentReportModel> = gson.fromJson(gson.toJson(resData),dataReport)
                     report_pay.value = dataContent
-                } else{
+                } else {
                     Toast.makeText(
                         context,
-                        "Error : ${response.body()?.message}",
+                        "Data Tidak Ditemukan",
                         Toast.LENGTH_SHORT
                     ).show()
+                    val gson = Gson()
+                    val dataReport : Type = object : TypeToken<List<PaymentReportModel>?>() {}.type
+                    val dataContent : List<PaymentReportModel> = gson.fromJson(gson.toJson(resData),dataReport)
+                    report_pay.value = dataContent
                 }
             }
-
             override fun onFailure(call: Call<ResponseAPI>, t: Throwable) {
                 t.printStackTrace()
                 Toast.makeText(

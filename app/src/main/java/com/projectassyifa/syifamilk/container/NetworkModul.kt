@@ -2,6 +2,7 @@ package com.projectassyifa.syifamilk.container
 
 import com.projectassyifa.syifamilk.config.Connect
 import com.projectassyifa.syifamilk.data.category.api.CategoryAPI
+import com.projectassyifa.syifamilk.data.ingredients.IngredientsAPI
 import com.projectassyifa.syifamilk.data.login.api.LoginAPI
 import com.projectassyifa.syifamilk.data.payment.api.PaymentAPI
 import com.projectassyifa.syifamilk.data.product.api.ProductAPI
@@ -44,6 +45,10 @@ class NetworkModul {
     @Provides
     fun provideReportAPI(): ReportAPI {
         return Connect.urlGlobal().create(ReportAPI::class.java)
+    }
+    @Provides
+    fun provideIngredientsAPI(): IngredientsAPI {
+        return Connect.urlGlobal().create(IngredientsAPI::class.java)
     }
 
 }

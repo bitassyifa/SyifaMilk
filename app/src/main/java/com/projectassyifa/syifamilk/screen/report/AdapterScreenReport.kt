@@ -27,14 +27,13 @@ class AdapterScreenReport(fm: FragmentManager, lifecycle: Lifecycle, private var
                 paymentFm.arguments = bundle
                 return paymentFm
             }
-//            2 -> {
-//                // # Books Fragment
-//                val bundle = Bundle()
-//                bundle.putString("fragmentName", "Books Fragment")
-//                val booksFragment = DemoFragment()
-//                booksFragment.arguments = bundle
-//                return booksFragment
-//            }
+            2 -> {
+                val bundle = Bundle()
+                bundle.putString("fragmentName", "Product")
+                val productFm = ReportProductSale()
+                productFm.arguments = bundle
+                return productFm
+            }
             else -> return ReportTransactions()
         }
     }

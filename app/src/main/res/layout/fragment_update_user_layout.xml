@@ -68,7 +68,7 @@
 
                 android:text="ID"
                 android:textColor="@color/keduax"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <TextView
                android:paddingLeft="15dp"
@@ -81,7 +81,7 @@
                 android:clickable="true"
                 android:textColor="@color/white"
                 android:fontFamily="@font/poppins_regular"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
 
         </LinearLayout>
@@ -102,7 +102,7 @@
 
                 android:text="Nama Lengkap"
                 android:textColor="@color/keduax"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:paddingLeft="15dp"
@@ -142,7 +142,7 @@
 
                 android:text="Nama Pengguna"
                 android:textColor="@color/keduax"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:paddingLeft="15dp"
@@ -182,7 +182,7 @@
 
                 android:text="No Tlp"
                 android:textColor="@color/keduax"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:paddingLeft="15dp"
@@ -223,7 +223,7 @@
 
                 android:text="Email"
                 android:textColor="@color/keduax"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:paddingLeft="15dp"
@@ -261,7 +261,7 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Photo"
                 android:textColor="@color/keduax"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -290,7 +290,6 @@
                         android:layout_weight="1"/>
                     <Button
                         android:textAllCaps="false"
-                        app:icon="@drawable/ic_ft"
                         android:id="@+id/chose_file"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
@@ -328,14 +327,14 @@
 
                 android:text="Role Status"
                 android:textColor="@color/keduax"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <RelativeLayout
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="3dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_spinner"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatSpinner
@@ -356,7 +355,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center"
-                    android:src="@drawable/drop" />
+                    android:src="@drawable/ic_drop" />
 
             </RelativeLayout>
 
@@ -379,7 +378,7 @@
         <!--                android:fontFamily="@font/poppins_semibold"-->
         <!--                android:text="Password"-->
         <!--                android:textColor="@color/keduax"-->
-        <!--                android:textSize="25dp" />-->
+        <!--                android:textSize="15dp" />-->
 
         <!--            <EditText-->
         <!--                android:paddingLeft="15dp"-->
@@ -418,7 +417,7 @@
         <!--                android:fontFamily="@font/poppins_semibold"-->
         <!--                android:text="Confirm Password"-->
         <!--                android:textColor="@color/keduax"-->
-        <!--                android:textSize="25dp" />-->
+        <!--                android:textSize="15dp" />-->
 
         <!--            <EditText-->
         <!--                android:id="@+id/confpassword_user"-->
@@ -444,7 +443,7 @@
 
     <Button
         android:id="@+id/btn_update"
-        android:layout_margin="50dp"
+        android:layout_margin="20dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/keduax"
@@ -452,7 +451,7 @@
         android:text="Update Pengguna"
         android:textAllCaps="false"
         android:textColor="@color/pertamax"
-        android:textSize="25dp"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
         app:layout_constraintStart_toStartOf="@+id/linearLayout5"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />

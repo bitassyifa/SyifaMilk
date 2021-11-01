@@ -51,6 +51,9 @@ class LoginLayout : Fragment(),View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
         if (dataLogin?.contains(getString(R.string.username))!! && dataLogin?.contains(getString(R.string.login_method_key))!!)
         {
             //jika ada sesion langsung ke home
@@ -77,6 +80,7 @@ class LoginLayout : Fragment(),View.OnClickListener {
                             this?.putString(getString(R.string.no_tlp), it.no_tlp)
 //                            this?.putString(getString(R.string.role_status), it.role_status)
                             this?.putString(getString(R.string.email), it.email)
+                            this?.putString(getString(R.string.role), it.role)
                             this?.putString(getString(R.string.photo_user), it.photo)
                             this?.putString(
                                 getString(R.string.login_method_key),

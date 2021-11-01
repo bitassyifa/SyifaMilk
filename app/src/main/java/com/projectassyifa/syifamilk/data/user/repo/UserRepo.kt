@@ -21,6 +21,7 @@ import javax.inject.Inject
 class UserRepo @Inject constructor(var userAPI: UserAPI) {
     var list_user : MutableLiveData<List<UserModel>> = MutableLiveData()
     var response_user = MutableLiveData<ResponseAPI>()
+
     //get user
     fun user(context: Context){
         userAPI.user().enqueue(object : Callback<ResponseAPI> {
@@ -36,12 +37,10 @@ class UserRepo @Inject constructor(var userAPI: UserAPI) {
                     val gson = Gson()
                     val data_user:Type = object : TypeToken<List<UserModel>?>() {}.type
                     val output_user : List<UserModel> = gson.fromJson(gson.toJson(resData),data_user)
-
                     list_user.value = output_user
                     println("VALUE DATA ${list_user.value}")
                 }
             }
-
             override fun onFailure(call: Call<ResponseAPI>, t: Throwable) {
                 t.printStackTrace()
                 Toast.makeText(
@@ -50,8 +49,6 @@ class UserRepo @Inject constructor(var userAPI: UserAPI) {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
-
         })
     }
 

@@ -130,6 +130,7 @@ class AddProductLayout : DialogFragment() {
             dataProduct.product_price = productPrice.text.toString()
             dataProduct.product_description = productDesc.text.toString()
 //            dataProduct.product_stock = productStock.text.toString()
+            dataProduct.starting_price = productStartPrice.text.toString()
             dataProduct.product_category = cat_id.toString()
             dataProduct.created_by = username.toString()
 //            println("DATA product_name ${dataProduct.product_name}")
@@ -137,7 +138,7 @@ class AddProductLayout : DialogFragment() {
 //            println("DATA product_description ${dataProduct.product_description}")
 //            println("DATA product_stock ${dataProduct.product_stock}")
 //            println("DATA product_category ${dataProduct.product_category}")
-//            println("DATA created_by ${dataProduct.created_by}")
+            println("START PRICE ${dataProduct.starting_price}")
 
             if (fileImage == null) {
 //                val loading = FileNull(this)

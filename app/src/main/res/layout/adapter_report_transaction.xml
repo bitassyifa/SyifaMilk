@@ -17,7 +17,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-
+        <TextView
+            android:id="@+id/no_transc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1.15"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="No"
+            android:textColor="@color/keduax"
+            android:textSize="13dp"/>
         <TextView
             android:id="@+id/id_trans"
             android:layout_width="match_parent"
@@ -29,7 +40,7 @@
             android:textAlignment="center"
             android:text="ID"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+              android:textSize="13dp"/>
 
         <TextView
             android:id="@+id/total_trans"
@@ -42,7 +53,7 @@
             android:textAlignment="center"
             android:text="Total"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+              android:textSize="13dp"/>
 
         <TextView
             android:textAlignment="center"
@@ -55,7 +66,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="Status"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+              android:textSize="13dp"/>
         <TextView
             android:textAlignment="center"
             android:id="@+id/tgl_trans"
@@ -67,29 +78,23 @@
             android:fontFamily="@font/poppins_medium"
             android:text="Tanggal"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+              android:textSize="13dp"/>
 
 
 
-        <LinearLayout
-
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/detail_trans"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:gravity="center"
             android:background="@drawable/bg_content"
             android:layout_weight="1.2"
-            android:orientation="horizontal" >
-            <ImageView
-                android:clickable="true"
-                android:id="@+id/btn_detail_trans"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:src="@drawable/cart"
-                android:layout_margin="2dp"
-                />
+            android:textAlignment="center"
+            android:src="@drawable/cart"
+            android:textColor="@color/keduax"
+            android:textSize="13dp"/>
 
-        </LinearLayout>
 
 
 

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.projectassyifa.syifamilk">
 
+    <uses-sdk tools:overrideLibrary="id.adiandrea.rupiahedittext" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -20,8 +22,10 @@
         android:theme="@style/Theme.SyifaMilk"
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="adjustResize"
-        tools:node="merge"
-  >
+        tools:node="merge">
+        <activity
+            android:name=".screen.ingredients.IngredientsActivity"
+            android:exported="true" />
         <activity
             android:name=".screen.dashboard.DashboardActivity"
             android:exported="true"
@@ -64,9 +68,9 @@
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
-                tools:replace="android:resource"
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/easyimage_filepaths" />
+                android:resource="@xml/easyimage_filepaths"
+                tools:replace="android:resource" />
         </provider>
     </application>
 

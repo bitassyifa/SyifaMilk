@@ -1,5 +1,7 @@
 package com.projectassyifa.syifamilk.screen.oder
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -61,7 +63,7 @@ class OrderDetail : DialogFragment()  {
         val width = (resources.displayMetrics.widthPixels * 0.60).toInt()
         val height = (resources.displayMetrics.heightPixels * 0.40).toInt()
         dialog!!.window?.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT)
-        getDialog()!!.getWindow()?.setBackgroundDrawableResource(R.drawable.round_corner);
+        getDialog()!!.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
     }
 
 }

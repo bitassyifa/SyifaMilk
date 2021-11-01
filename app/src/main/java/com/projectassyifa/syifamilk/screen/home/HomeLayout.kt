@@ -9,8 +9,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.projectassyifa.syifamilk.R
 import com.projectassyifa.syifamilk.screen.dashboard.DashboardActivity
+import com.projectassyifa.syifamilk.screen.ingredients.IngredientsActivity
 import com.projectassyifa.syifamilk.screen.login.LoginActivity
 import com.projectassyifa.syifamilk.screen.oder.OrderActivity
 import com.projectassyifa.syifamilk.screen.product.ManagProductActivity
@@ -40,8 +42,20 @@ class HomeLayout : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        val role = dataLogin?.getString(
+            getString(R.string.role),
+            getString(R.string.default_value)
+        )
+
         menu_manaj_user.setOnClickListener {
-            startActivity(Intent(this.context,ManagementUser::class.java))
+            if (role == "2"){
+                menu_manaj_user.isActivated = false
+                Toast.makeText(this.context,"Hanya admin yang bisa Manage User", Toast.LENGTH_SHORT).show()
+            } else {
+                startActivity(Intent(this.context, ManagementUser::class.java))
+            }
         }
         menu_transaksi.setOnClickListener {
             startActivity(Intent(this.context,OrderActivity::class.java))
@@ -52,11 +66,14 @@ class HomeLayout : Fragment() {
         menu_report.setOnClickListener {
             startActivity(Intent(this.context,ReportMainActivity::class.java))
         }
-
+//
         menu_dashboard.setOnClickListener {
             startActivity(Intent(this.context,DashboardActivity::class.java))
         }
-
+        menu_ingredients.setOnClickListener {
+            startActivity(Intent(this.context,IngredientsActivity::class.java))
+        }
+//
         btn_logout.setOnClickListener {
             println("BTN LOGOUT")
             // Initialize a new instance of

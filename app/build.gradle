@@ -38,6 +38,13 @@ android {
 }
 
 dependencies {
+    //rupiah edit text
+    implementation 'com.github.dekzitfz:RupiahEditText:0.0.4'
+    implementation "com.google.guava:guava:19.0"
+
+    //print
+    implementation "com.github.isradeleon:ThermalPrinter:1.0.3"
+
     //chart
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
 

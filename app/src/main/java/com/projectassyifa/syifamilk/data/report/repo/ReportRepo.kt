@@ -46,6 +46,39 @@ class ReportRepo @Inject constructor(val reportAPI: ReportAPI) {
         })
     }
 
+    fun get_sale_day(context: Context,tanggal:String){
+        reportAPI.get_sale_day(tanggal).enqueue(object : Callback<ResponseAPI>{
+            override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
+                val resData = response.body()?.data
+
+                if (response.body()?.status == true ){
+                    val objectData : Type = object : TypeToken<List<ReportProductModel>>() {}.type
+                    val resValue : List<ReportProductModel> = Gson().fromJson(Gson().toJson(resData),objectData)
+                    data_report_product.value = resValue
+                } else {
+                    Toast.makeText(
+                        context,
+                        " ${response.body()?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    val objectData : Type = object : TypeToken<List<ReportProductModel>>() {}.type
+                    val resValue : List<ReportProductModel> = Gson().fromJson(Gson().toJson(resData),objectData)
+                    data_report_product.value = resValue
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseAPI>, t: Throwable) {
+                println(t.localizedMessage)
+                Toast.makeText(
+                    context,
+                    "Terjadi kesalahan saat terhubung ke server",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+        })
+    }
+
     fun get_income(context: Context){
         reportAPI.get_income().enqueue(object : Callback<ResponseAPI> {
             override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {

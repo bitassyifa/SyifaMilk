@@ -57,6 +57,7 @@ class ProductRepo @Inject constructor(var productAPI: ProductAPI) {
     fun add_product(context: Context,data: ProductModel,file :File){
         val product_name = convert(data.product_name)
         val product_price = convert(data.product_price)
+        val starting_price = convert(data.starting_price)
         val product_description = convert(data.product_description)
         val product_stock = convert(data.product_stock)
         val product_category = convert(data.product_category)
@@ -65,7 +66,7 @@ class ProductRepo @Inject constructor(var productAPI: ProductAPI) {
 
         val aktivitas : ManagProductActivity =  context as  ManagProductActivity
 
-        productAPI.add_product(product_name, product_price, product_description, product_stock, product_category, created_by, photo_product).enqueue(object :Callback<ResponseAPI>{
+        productAPI.add_product(product_name,starting_price, product_price, product_description, product_stock, product_category, created_by, photo_product).enqueue(object :Callback<ResponseAPI>{
             override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
                 val res = response.body()
 
@@ -190,6 +191,7 @@ class ProductRepo @Inject constructor(var productAPI: ProductAPI) {
 
         val product_name = convert(data.product_name)
         val product_price = convert(data.product_price)
+        val starting_price = convert(data.starting_price)
         val product_description = convert(data.product_description)
         val product_stock = convert(data.product_stock)
         val product_category = convert(data.product_category)
@@ -204,7 +206,7 @@ class ProductRepo @Inject constructor(var productAPI: ProductAPI) {
         println("DATA REPO product_category ${data.product_category}")
         println("DATA REPO update by ${data.updated_by}")
 
-        productAPI.update_product(product_id, product_name, product_price, product_description, product_stock, product_category, updated_by,photo_product).enqueue(object : Callback<ResponseAPI>{
+        productAPI.update_product(product_id, product_name, product_price,starting_price, product_description, product_stock, product_category, updated_by,photo_product).enqueue(object : Callback<ResponseAPI>{
             override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
                 val res = response.body()
 
@@ -265,20 +267,14 @@ class ProductRepo @Inject constructor(var productAPI: ProductAPI) {
 
         val product_name = convert(data.product_name)
         val product_price = convert(data.product_price)
+        val starting_price = convert(data.starting_price)
         val product_description = convert(data.product_description)
         val product_stock = convert(data.product_stock)
         val product_category = convert(data.product_category)
         val updated_by = convert(data.updated_by)
 
-        println("DATA  REPO product_ID $product_id")
-        println("DATA REPO product_name ${data.product_name}")
-        println("DATA REPO product_price ${data.product_price}")
-        println("DATA REPO product_stock ${data.product_stock}")
-        println("DATA REPO product_description ${data.product_description}")
-        println("DATA REPO product_category ${data.product_category}")
-        println("DATA REPO update by ${data.updated_by}")
 
-        productAPI.update_product(product_id, product_name, product_price, product_description, product_stock, product_category, updated_by).enqueue(object : Callback<ResponseAPI>{
+        productAPI.update_product(product_id, product_name, product_price,starting_price, product_description, product_stock, product_category, updated_by).enqueue(object : Callback<ResponseAPI>{
             override fun onResponse(call: Call<ResponseAPI>, response: Response<ResponseAPI>) {
                 val res = response.body()
 

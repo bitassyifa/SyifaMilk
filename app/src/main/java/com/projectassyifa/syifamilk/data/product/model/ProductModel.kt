@@ -4,6 +4,8 @@ class ProductModel {
     var product_id : String =""
     var product_name: String =""
     var product_price : String = ""
+    var starting_price : String = ""
+    var profit: String = ""
     var product_description : String =""
     var product_image : String =""
     var product_stock : String =""

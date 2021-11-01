@@ -6,7 +6,7 @@ class TransactionModel (
 
     //transaction all
     var id_transactions : String ="",
-    var total_payment : String ="",
+    var total_payment : Int = 0,
     var status :String ="",
     var tanggal : String ="",
     var created_by : String ="",
@@ -38,3 +38,9 @@ class OrderModel(
     var total_price_item : String =""
 )
 {}
+
+class OrderPrint(
+    var product_name : String ="",
+    var product_qty : String ="",
+    var total_price_item : String =""
+)

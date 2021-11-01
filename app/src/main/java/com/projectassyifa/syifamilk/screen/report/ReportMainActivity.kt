@@ -24,7 +24,7 @@ class ReportMainActivity : AppCompatActivity() {
         tab_layout.setBackgroundColor(ContextCompat.getColor(this, R.color.keduax))
         tab_layout.tabTextColors = ContextCompat.getColorStateList(this, android.R.color.white)
 
-         val numberOfTabs = 2
+         val numberOfTabs = 3
 
         // Set Tabs in the center
         //tab_layout.tabGravity = TabLayout.GRAVITY_CENTER
@@ -55,7 +55,10 @@ class ReportMainActivity : AppCompatActivity() {
                 1 -> {
                     tab.text = "Pembayaran"
                     tab.setIcon(R.drawable.ic_pay)
-
+                }
+                2 -> {
+                    tab.text = "Produk"
+                    tab.setIcon(R.drawable.ic_prod)
                 }
 
             }

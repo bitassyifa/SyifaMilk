@@ -3,6 +3,7 @@ package com.projectassyifa.syifamilk.screen.user
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,9 @@ import com.projectassyifa.syifamilk.container.MyApp
 import com.projectassyifa.syifamilk.data.user.adapter.AdapterUser
 import com.projectassyifa.syifamilk.data.user.vm.UserVM
 import com.projectassyifa.syifamilk.screen.alert.LoadingBrown
+import kotlinx.android.synthetic.main.activity_manag_product.*
 import kotlinx.android.synthetic.main.activity_management_user.*
+import kotlinx.android.synthetic.main.activity_management_user.refresh
 import javax.inject.Inject
 
 class ManagementUser : AppCompatActivity() {
@@ -25,6 +28,7 @@ class ManagementUser : AppCompatActivity() {
         setContentView(R.layout.activity_management_user)
         (applicationContext as MyApp).applicationComponent.inject(this)
 
+        refreshApp()
 //        val loading = LoadingBrown(this)
 //        loading.startLoading()
 //        val handler = Handler()
@@ -51,6 +55,15 @@ class ManagementUser : AppCompatActivity() {
         }
 
     }
+
+    private fun refreshApp() {
+        refresh.setOnRefreshListener {
+            Toast.makeText(this,"Refresh", Toast.LENGTH_SHORT).show()
+            finish();
+            startActivity(getIntent());
+        }
+    }
+
     fun finishMe() {
         finish()
         startActivity(getIntent());

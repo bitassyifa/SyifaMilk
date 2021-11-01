@@ -151,6 +151,7 @@ class UpdateProductLayout : DialogFragment() {
             updateData.product_name = u_productName.text.toString()
             updateData.product_price = u_productPrice.text.toString()
             updateData.product_description = u_productDesc.text.toString()
+            updateData.starting_price = u_StartPrice.text.toString()
 //            updateData.product_stock = u_productStock.text.toString()
             updateData.product_category = cat_id.toString()
             updateData.updated_by = username!!

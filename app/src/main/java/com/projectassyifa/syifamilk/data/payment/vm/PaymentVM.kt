@@ -18,14 +18,10 @@ class PaymentVM @Inject constructor(val paymentRepo: PaymentRepo){
     fun get_payment_method(context: Context){
         paymentRepo.get_payment_method(context)
     }
-
-
     fun post_payment(context: Context,paymentModel: PaymentModel){
         paymentRepo.post_payment(context,paymentModel)
     }
-
-    fun get_payment(context: Context){
-        paymentRepo.get_payment(context)
+    fun get_payment(context: Context,tanggal:String){
+        paymentRepo.get_payment(context,tanggal)
     }
-
 }

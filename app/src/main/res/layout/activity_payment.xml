@@ -39,7 +39,8 @@
                android:fontFamily="@font/poppins_regular"
                android:text="ID Transaksi :"
                android:textColor="@color/white"
-               android:textSize="22dp" />
+               android:textSize="15dp" />
+
                <TextView
                    android:id="@+id/id_trans"
                    android:layout_width="match_parent"
@@ -49,7 +50,7 @@
                    android:fontFamily="@font/poppins_semibold"
                    android:text="Order"
                    android:textColor="@color/white"
-                   android:textSize="25dp" />
+                   android:textSize="15dp" />
            </LinearLayout>
 
            <LinearLayout
@@ -71,7 +72,7 @@
                    android:text="Item"
                    android:textAlignment="center"
                    android:textColor="@color/white"
-                   android:textSize="20dp" />
+                    android:textSize="15dp" />
 
                <TextView
                    android:layout_width="match_parent"
@@ -81,7 +82,7 @@
                    android:text="Qty"
                    android:textAlignment="center"
                    android:textColor="@color/white"
-                   android:textSize="20dp" />
+                    android:textSize="15dp" />
 
                <TextView
                    android:layout_width="match_parent"
@@ -91,7 +92,7 @@
                    android:text="Price"
                    android:textAlignment="center"
                    android:textColor="@color/white"
-                   android:textSize="20dp" />
+                    android:textSize="15dp" />
            </LinearLayout>
 
            <View
@@ -152,7 +153,7 @@
                    android:fontFamily="@font/poppins_semibold"
                    android:text="Subtotal   :"
                    android:textColor="@color/white"
-                   android:textSize="25dp" />
+                   android:textSize="20dp" />
 
                <TextView
                    android:id="@+id/subtotal1"
@@ -163,7 +164,7 @@
                    android:text="0"
                    android:textAlignment="textEnd"
                    android:textColor="@color/white"
-                   android:textSize="27dp" />
+                   android:textSize="20dp" />
            </LinearLayout>
 
 
@@ -198,7 +199,7 @@
             android:fontFamily="@font/poppins_bold"
             android:text="Payment"
             android:textColor="@color/keduax"
-            android:textSize="30dp" />
+            android:textSize="16dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -207,7 +208,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="choose payment method"
             android:textColor="@color/keduax"
-            android:textSize="20dp" />
+             android:textSize="12dp" />
 
         <View
             android:layout_width="match_parent"
@@ -231,11 +232,10 @@
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_payment_proses"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -255,7 +255,7 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:text="ID Customer"
                 android:textColor="@color/keduax"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/pay_idcustomer"
@@ -273,7 +273,7 @@
                 android:shadowDy="4"
                 android:text=""
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
 
         </LinearLayout>
@@ -295,7 +295,7 @@
 
                 android:text="Nama Customer"
                 android:textColor="@color/keduax"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/pay_namecustomer"
@@ -313,7 +313,7 @@
                 android:shadowDy="4"
                 android:text=""
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
 
         </LinearLayout>
@@ -334,27 +334,42 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Bayar"
                 android:textColor="@color/keduax"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
-            <EditText
-                android:id="@+id/pay_bayar"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/bg_text2"
-                android:clickable="true"
-                android:fontFamily="@font/poppins_regular"
-                android:inputType="number"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:shadowDx="2"
-                android:shadowDy="4"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Rp. "
+                    android:textColor="@color/keduax"
+                    android:textSize="15dp" />
 
+                <id.adiandrea.rupiahedittext.RupiahEditText
+                    android:id="@+id/pay_bayar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_text2"
+                    android:clickable="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:shadowDx="2"
+                    android:shadowDy="4"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -371,48 +386,86 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Kembalian"
+                android:text="Kemballi/Sisa"
                 android:textColor="@color/keduax"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
-            <EditText
-                android:id="@+id/pay_kembalian"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/bg_text2"
-                android:clickable="true"
-                android:fontFamily="@font/poppins_regular"
-                android:inputType="number"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:shadowDx="2"
-                android:shadowDy="4"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
-
+                <TextView
+                    android:id="@+id/kembaliantv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_text2"
+                    android:clickable="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:shadowDx="2"
+                    android:shadowDy="4"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </LinearLayout>
         </LinearLayout>
+
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_payment_proses"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:layout_marginBottom="44dp"
-        android:backgroundTint="@color/keduax"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Simpan"
-        android:textAllCaps="false"
-        android:textColor="@color/pertamax"
-        android:textSize="22dp"
+       android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="5dp">
+        <Button
+           android:drawableLeft="@drawable/ic_print"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/btn_print"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/keduax"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Print"
+            android:textAllCaps="false"
+            android:textColor="@color/pertamax"
+            android:textSize="17dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <Button
+            android:drawableLeft="@drawable/ic_save"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/btn_payment_proses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/keduax"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Simpan"
+            android:textAllCaps="false"
+            android:textColor="@color/pertamax"
+            android:textSize="17dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

@@ -79,7 +79,7 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
         },2000)
 
         // list product
-        R_listproduct.layoutManager = StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL)
+        R_listproduct.layoutManager = StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL)
         productVM.list_product?.observe(this, Observer {
 
             adapterProduct = AdapterProduct(it,this,cartVM)
@@ -119,17 +119,17 @@ class OrderActivity : AppCompatActivity(), View.OnClickListener {
 
         })
 
-        cat_kopi.setOnClickListener {
-            R_listproduct.layoutManager = StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL)
-            productVM.list_product?.observe(this, Observer {
-                println("INI IT $it")
-                adapterProduct = AdapterProduct(it,this,cartVM)
-                R_listproduct.adapter=adapterProduct
-                adapterProduct.notifyDataSetChanged()
-            })
-            productVM.by_category(this,1)
-
-        }
+//        cat_kopi.setOnClickListener {
+//            R_listproduct.layoutManager = StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL)
+//            productVM.list_product?.observe(this, Observer {
+//                println("INI IT $it")
+//                adapterProduct = AdapterProduct(it,this,cartVM)
+//                R_listproduct.adapter=adapterProduct
+//                adapterProduct.notifyDataSetChanged()
+//            })
+//            productVM.by_category(this,1)
+//
+//        }
         val username = dataLogin?.getString(
             getString(R.string.username),
             getString(R.string.default_value)

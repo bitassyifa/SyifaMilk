@@ -30,7 +30,10 @@ import com.projectassyifa.syifamilk.screen.oder.OrderActivity
 import com.projectassyifa.syifamilk.screen.payment.PaymentActivity
 import com.projectassyifa.syifamilk.screen.user.ManagementUser
 import de.hdodenhof.circleimageview.CircleImageView
+import java.text.NumberFormat
+import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 
 class AdapterCart(
     private val cartList :MutableList<CartModel>,
@@ -72,7 +75,12 @@ class AdapterCart(
         for (i in cartVM.cartlist.indices){
             totalPrice += (cartVM.cartlist[i].productPrice.toInt())
         }
-        subtotal.text = "Rp. $totalPrice"
+
+        val localeID = Locale("in", "ID")
+        val formatRupiah = NumberFormat.getCurrencyInstance(localeID)
+        subtotal.setText(formatRupiah.format(totalPrice))
+
+//        subtotal.text = "Rp. $totalPrice"
 
       //delete cart
         holder.del_cart.setOnClickListener {
@@ -132,6 +140,6 @@ class CartVH (v:View): RecyclerView.ViewHolder(v) {
     var productQty = v.findViewById<TextView>(R.id.qtyproduct)
     var product_image = v.findViewById<CircleImageView>(R.id.product_image1)
     var unitPrice = v.findViewById<TextView>(R.id.unitprice)
-    var del_cart = v.findViewById<Button>(R.id.del_cart)
+    var del_cart = v.findViewById<ImageButton>(R.id.del_cart)
 
 }

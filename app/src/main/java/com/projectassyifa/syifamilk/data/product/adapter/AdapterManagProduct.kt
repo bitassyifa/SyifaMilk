@@ -42,6 +42,9 @@ class AdapterManagProduct(var list_product : List<ProductModel>, var activity: A
         holder.id.text = daftar.product_id.toString()
         holder.nama.text = daftar.product_name
         holder.harga.text = daftar.product_price.toString()
+        holder.harga_awal.text = daftar.starting_price
+        holder.profit.text = daftar.profit
+        holder.no.text = (position +1).toString()
 //        holder.stok.text = daftar.product_stock.toString()
 
         holder.edit.setOnClickListener {
@@ -147,8 +150,11 @@ class ProductVH1(view: View) : RecyclerView.ViewHolder(view) {
     var id = view.findViewById<TextView>(R.id.id_product)
     var nama = view.findViewById<TextView>(R.id.nama_produk)
     var harga = view.findViewById<TextView>(R.id.harga_produk)
+    var harga_awal = view.findViewById<TextView>(R.id.harga_awal)
+    var profit = view.findViewById<TextView>(R.id.harga_profit)
 //    var stok = view.findViewById<TextView>(R.id.stok)
     var edit = view.findViewById<ImageButton>(R.id.btn_edit_produk)
     var delete = view.findViewById<ImageButton>(R.id.btn_delete_product)
+    var no = view.findViewById<TextView>(R.id.no_product)
 
 }

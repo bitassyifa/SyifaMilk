@@ -23,6 +23,6 @@
         android:padding="2dp"
         android:text="nama"
         android:textColor="@color/keduax"
-        android:textSize="22dp" />
+        android:textSize="14dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

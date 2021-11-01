@@ -4,6 +4,7 @@ import com.projectassyifa.syifamilk.utils.ResponseAPI
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface ReportAPI {
 
@@ -18,4 +19,8 @@ interface ReportAPI {
     //report income balance
     @GET("report/income_balance")
     fun get_income_balance():Call<ResponseAPI>
+
+    //productsale per day
+    @GET("report/productSale/{tanggal}")
+    fun get_sale_day(@Path("tanggal")tanggal : String):Call<ResponseAPI>
 }

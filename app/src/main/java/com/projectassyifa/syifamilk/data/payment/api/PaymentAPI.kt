@@ -6,6 +6,7 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface PaymentAPI {
 
@@ -18,6 +19,6 @@ interface PaymentAPI {
     fun get_payment_method(): Call<ResponseAPI>
 
     // get report
-    @GET("payment")
-    fun get_payment():Call<ResponseAPI>
+    @GET("payment/tgl/{tanggal}")
+    fun get_payment(@Path("tanggal")tanggal : String):Call<ResponseAPI>
 }

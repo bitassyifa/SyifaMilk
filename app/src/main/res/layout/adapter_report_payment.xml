@@ -17,7 +17,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-
+        <TextView
+            android:id="@+id/no_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1.1"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="No"
+            android:textColor="@color/keduax"
+            android:textSize="13dp"/>
         <TextView
             android:id="@+id/id_payment"
             android:layout_width="match_parent"
@@ -29,7 +40,7 @@
             android:textAlignment="center"
             android:text="ID pay"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+             android:textSize="13dp"/>
 
         <TextView
             android:id="@+id/total_payment"
@@ -42,7 +53,7 @@
             android:textAlignment="center"
             android:text="total pay"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+             android:textSize="13dp"/>
 
         <TextView
             android:id="@+id/tgl_payment"
@@ -55,7 +66,7 @@
             android:textAlignment="center"
             android:text="tgl pay"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+             android:textSize="13dp"/>
         <TextView
             android:id="@+id/sts_payment"
             android:layout_width="match_parent"
@@ -67,18 +78,30 @@
             android:textAlignment="center"
             android:text="sts"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+             android:textSize="13dp"/>
+        <TextView
+            android:id="@+id/remain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:text="sts"
+            android:textColor="@color/keduax"
+            android:textSize="13dp"/>
         <ImageView
             android:clickable="true"
             android:id="@+id/detail_pay"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:background="@drawable/bg_content"
             android:layout_weight="1.1"
             android:textAlignment="center"
             android:src="@drawable/detail"
             android:textColor="@color/keduax"
-            android:textSize="18dp" />
+             android:textSize="13dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

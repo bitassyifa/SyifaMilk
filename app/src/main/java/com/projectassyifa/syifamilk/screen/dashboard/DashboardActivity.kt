@@ -18,7 +18,10 @@ import com.projectassyifa.syifamilk.data.report.vm.ReportVM
 import com.projectassyifa.syifamilk.screen.alert.Diagram
 import com.projectassyifa.syifamilk.screen.alert.Successfully
 import kotlinx.android.synthetic.main.activity_dashboard.*
+import java.text.NumberFormat
+import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -26,7 +29,8 @@ class DashboardActivity : AppCompatActivity() {
 
     @Inject
     lateinit var reportVM : ReportVM
-
+    val localeID = Locale("in", "ID")
+    val formatRupiah = NumberFormat.getCurrencyInstance(localeID)
     private var chart : AnyChartView? = null
     private var product : ArrayList<String> = ArrayList()
    private  var jumlah : ArrayList<Int> = ArrayList()
@@ -46,7 +50,7 @@ class DashboardActivity : AppCompatActivity() {
                 animate.isDismiss()
             }
 
-        }, 4000)
+        }, 2000)
 
         //CHART PRODUCT
         chart = findViewById(R.id.chart_sale_product)
@@ -74,17 +78,21 @@ class DashboardActivity : AppCompatActivity() {
 
         //Report Income
         reportVM.data_report_income?.observe(this, Observer {
-            income_perhari.text = it.perhari
-            income_perbulan.text = it.perbulan
-            income_perminggu.text = it.perminggu
-            income_pertahun.text = it.pertahun
+
+
+//            subtotal.setText(formatRupiah.format(totalPrice))
+
+            income_perhari.setText(formatRupiah.format(it.perhari))
+            income_perbulan.setText(formatRupiah.format(it.perminggu))
+            income_perminggu.setText(formatRupiah.format(it.perbulan))
+            income_pertahun.setText(formatRupiah.format(it.pertahun))
         })
         reportVM.get_income(this)
 //        configChartView()
 
         reportVM.data_report_balance?.observe(this, Observer {
-                income_payment.text = it.income_payment
-                income_transaksi.text = it.income_transaksi
+                income_payment.setText(formatRupiah.format(it.income_payment))
+                income_transaksi.setText(formatRupiah.format(it.income_transaksi))
             if (it.income_payment == it.income_transaksi){
                 Glide.with(this)
                     .load(this.getResources().getDrawable(R.drawable.balance))

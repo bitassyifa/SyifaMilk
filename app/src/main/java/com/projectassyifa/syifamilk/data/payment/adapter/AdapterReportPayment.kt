@@ -35,12 +35,12 @@ class AdapterReportPayment (var list_payment : List<PaymentReportModel>,var acti
             holder.status.setBackgroundResource(R.drawable.bg_unpaid)
             holder.status.setTextColor(Color.WHITE)
         }
-
+        holder.no.text = (position+1).toString()
         holder.id.text = daftar.id_payment
         holder.total.text = daftar.total_payment
         holder.tanggal.text = daftar.tanggal
         holder.status.text = daftar.status
-
+        holder.remaining.text = daftar.remaining
         val manager = (holder.itemView.context as FragmentActivity).supportFragmentManager
         holder.detail.setOnClickListener {
             var dialog = PaymentDetail()
@@ -67,10 +67,11 @@ class AdapterReportPayment (var list_payment : List<PaymentReportModel>,var acti
 }
 
 class PaymentVH (view: View) : RecyclerView.ViewHolder(view){
-
     var id = view.findViewById<TextView>(R.id.id_payment)
     var total = view.findViewById<TextView>(R.id.total_payment)
     var tanggal = view.findViewById<TextView>(R.id.tgl_payment)
     var status = view.findViewById<TextView>(R.id.sts_payment)
     var detail = view.findViewById<ImageView>(R.id.detail_pay)
+    var remaining = view.findViewById<TextView>(R.id.remain)
+    var no = view.findViewById<TextView>(R.id.no_payment)
 }
